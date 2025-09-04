@@ -1,0 +1,274 @@
+/* Container principal */
+.form-builder-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+.form-builder-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-builder-header h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Abas */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tabs button.active {
+  color: #2c3e50;
+  border-bottom-color: #3498db;
+  font-weight: bold;
+}
+
+/* Área do formulário */
+.form-preview {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo de edição vs pré-visualização */
+.edit-mode, .preview-mode {
+  padding: 15px;
+}
+
+.preview-toggle-button {
+  padding: 8px 16px;
+  background-color: #f1c40f;
+  color: #2c3e50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Campos do formulário */
+.form-header input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-header textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-height: 80px;
+}
+
+/* Área de campos arrastáveis */
+.form-fields-container {
+  margin: 20px 0;
+}
+
+.form-field-editor {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Efeitos de arrastar */
+.draggable-item {
+  transition: transform 0.2s ease;
+}
+
+.is-dragging {
+  background-color: #e3f2fd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.drag-handle {
+  cursor: move;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+/* Cabeçalho do campo */
+.field-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.field-header h4 {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.remove-field {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+/* Opções de campo */
+.field-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.field-option {
+  margin-bottom: 10px;
+}
+
+.field-option label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.field-option input[type="text"],
+.field-option input[type="number"],
+.field-option select,
+.field-option textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Seção de adicionar campo */
+.add-field-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.field-type-selector {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-field-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Ações do formulário */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-form-button {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Pré-visualização */
+.preview-mode .form-field {
+  margin-bottom: 20px;
+}
+
+.preview-mode label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.preview-mode input[type="text"],
+.preview-mode input[type="number"],
+.preview-mode input[type="date"],
+.preview-mode select,
+.preview-mode textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.required-asterisk {
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+/* Campos específicos */
+.payment-field, .commitment-field {
+  display: grid;
+  gap: 10px;
+}
+
+.checkbox-options, .radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Erros */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+input.error {
+  border-color: #e74c3c;
+}
+.is-dragging {
+  background-color: #e3f2fd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.drag-handle {
+  cursor: move;
+  padding: 0 10px;
+}

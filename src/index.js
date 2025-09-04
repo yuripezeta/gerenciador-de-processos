@@ -1,0 +1,12 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { makeServer } from './mocks/server';
+
+if (process.env.NODE_ENV === 'development') {
+  makeServer();
+}
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App />);
